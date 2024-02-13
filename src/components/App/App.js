@@ -5,15 +5,21 @@ import { useEffect, useRef, useState } from "react";
 import { runSequence } from "../../utils/runner";
 
 // TODO!!!!! clear the setTimeout, otherwise when you run a new DAG, you'll have old one running too
+// Todo:  pass the errors
+// Todo:  mobile
 
 const emailExample =
   '{"A": {"start": true, "edges": {"B": 5,"C": 7}}, "B": {"edges": {"D": 3}}, "C": {"edges": {"D": 3}}, "D": {"edges": {}}}';
 
 function App() {
   const [nodes, setCompletedNodes] = useState([]);
-  const nodesRef = useRef([]);
+  const nodesRef = useRef([]); // Needed for the callback to have the latest value
+
   const onSubmit = (DAGText) => {
-    runSequence(emailExample, printValue);
+    // Clear old nodes
+    setCompletedNodes([]);
+    // Run new nodes based on inputted JSON
+    runSequence(DAGText, printValue);
   };
 
   useEffect(() => {
