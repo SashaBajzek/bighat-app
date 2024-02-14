@@ -1,15 +1,29 @@
 :root {
+  --background-primary: var(--bighat-peach);
   --border-primary: rgb(50, 50, 50);
   --border-primary: rgb(85, 70, 170);
   --text-primary: rgb(50, 50, 50);
-  --text-accent: var(--white-default);
-  --background-color-accent: rgb(97, 108, 64);
-  --background-color-accent-hover-focus: rgb(77, 86, 51);
-  --background-color-accent-active: rgb(67, 75, 44);
-  --white-default: rgb(255, 255, 255);
+  --text-accent: var(--white);
+  --background-color-accent: var(--bighat-dark-purple);
+  --background-color-accent-hover-focus: var(--bighat-medium-purple);
+  --background-color-accent-active: var(--bighat-medium-purple);
+  --white: rgb(255, 255, 255);
   --white-hover-focus: rgb(235, 235, 235);
   --white-active: rgb(230, 230, 230);
+  --bighat-dark-purple: rgb(42, 34, 81);
+  --bighat-medium-purple: rgb(125, 125, 247);
+  --bighat-grey: rgb(246, 246, 246);
+  --bighat-peach: rgb(250, 225, 217);
+  --bighat-pink: rgb(248, 221, 253);
   --error: #a80014;
+}
+
+html {
+  background: linear-gradient(
+    to bottom right,
+    var(--bighat-peach),
+    var(--bighat-pink)
+  );
 }
 
 *,
@@ -25,12 +39,13 @@
 
 .App-header {
   color: var(--text-accent);
-  background-color: #282c34;
+  background-color: var(--bighat-dark-purple);
   font-size: 3rem;
   padding-block: 2rem;
 }
 
 main {
+  color: var(--text-primary);
   display: flex;
   justify-content: space-around;
   margin: 20px;

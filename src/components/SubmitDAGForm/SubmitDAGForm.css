@@ -32,4 +32,9 @@
   .divider {
     padding-block: 1rem;
   }
+
+  textarea {
+    background-color: var(--bighat-grey);
+    border-radius: 10px;
+  }
 }
