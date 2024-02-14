@@ -2,22 +2,22 @@ import SubmitDAGForm from "../SubmitDAGForm/SubmitDAGForm";
 import WorkflowList from "../WorkflowList/WorkflowList";
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
-import { runSequence } from "../../utils/runner";
+import { useRunner } from "../../utils/useRunner";
 
-// TODO!!!!! clear the setTimeout, otherwise when you run a new DAG, you'll have old one running too
 // Todo:  pass the errors
 // Todo:  mobile
 
 function App() {
   const [nodes, setCompletedNodes] = useState([]);
   const nodesRef = useRef([]); // Needed for the callback to have the latest value
+  const run = useRunner();
 
   const onSubmit = (DAGText) => {
     // Clear old nodes
     setCompletedNodes([]);
     nodesRef.current = [];
     // Run new nodes based on inputted JSON
-    runSequence(DAGText, printValue);
+    run(DAGText, printValue);
   };
 
   useEffect(() => {

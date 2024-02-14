@@ -1,8 +1,3 @@
-const emailExample =
-  '{"A": {"start": true, "edges": {"B": 5,"C": 7}}, "B": {"edges": {"D": 3}}, "C": {"edges": {"D": 3}}, "D": {"edges": {}}}';
-const originalExample =
-  '{"A": {"start": true, "edges": {"B": 5, "C": 7}}, "B": {"edges": {}}, "C": {"edges": {}}}';
-
 // Identify the starting node
 // Run time O(v), linear
 function getStartingNodeKey(graph) {
