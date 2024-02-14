@@ -8,9 +8,6 @@ import { runSequence } from "../../utils/runner";
 // Todo:  pass the errors
 // Todo:  mobile
 
-const emailExample =
-  '{"A": {"start": true, "edges": {"B": 5,"C": 7}}, "B": {"edges": {"D": 3}}, "C": {"edges": {"D": 3}}, "D": {"edges": {}}}';
-
 function App() {
   const [nodes, setCompletedNodes] = useState([]);
   const nodesRef = useRef([]); // Needed for the callback to have the latest value
@@ -18,6 +15,7 @@ function App() {
   const onSubmit = (DAGText) => {
     // Clear old nodes
     setCompletedNodes([]);
+    nodesRef.current = [];
     // Run new nodes based on inputted JSON
     runSequence(DAGText, printValue);
   };
@@ -40,10 +38,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">DAG Workflow Runner</header>
-
-      <SubmitDAGForm onSubmit={onSubmit} />
-
-      <WorkflowList nodes={nodes} />
+      <main>
+        <SubmitDAGForm onSubmit={onSubmit} />
+        <WorkflowList nodes={nodes} />
+      </main>
     </div>
   );
 }

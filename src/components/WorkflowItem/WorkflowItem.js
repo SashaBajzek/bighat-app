@@ -3,8 +3,8 @@ import "./WorkflowItem.css";
 function WorkflowItem({ id, text, time }) {
   return (
     <li className="WorkflowItem">
-      <div>{text}</div>
-      <div>Elapsed Time: {time}</div>
+      <div className="value">{text}</div>
+      <div className="time">Elapsed Time: {time}s</div>
     </li>
   );
 }

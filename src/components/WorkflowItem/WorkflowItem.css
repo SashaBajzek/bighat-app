@@ -1,4 +1,44 @@
 .WorkflowItem {
-    border: 1px solid blue;
-    padding: 20px;
+  background-color: rgb(245, 245, 255);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  inline-size: 200px;
+  padding-block: 1.2rem;
+  padding-inline: 2rem;
+  position: relative;
+
+  .value {
+    font-size: 2rem;
+    padding-block-end: 0.8rem;
+  }
+
+  .time {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    border: solid var(--border-primary);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  &:not(:first-child) {
+    margin-block-start: 3rem;
+  }
+
+  &:not(:first-child)::before {
+    content: "";
+    border: solid var(--border-primary);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    inset-block-start: -2rem;
+    inset-inline-start: 98px;
+    padding: 3px;
+    position: absolute;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 }

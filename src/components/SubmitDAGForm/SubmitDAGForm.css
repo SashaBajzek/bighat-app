@@ -1,0 +1,35 @@
+.SubmitDAGForm {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    background: var(--background-color-accent);
+    block-size: 60px;
+    border-width: 0;
+    color: white;
+    flex-shrink: 0;
+    font-size: 20px;
+    inline-size: 100%;
+    margin-block: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: var(--background-color-accent-hover-focus);
+      transition: background-color 0.2s;
+    }
+
+    &:active,
+    &:focus-visible {
+      background: var(--background-color-accent-active);
+      transition: background-color 0.2s;
+    }
+  }
+
+  .divider {
+    padding-block: 1rem;
+  }
+}
