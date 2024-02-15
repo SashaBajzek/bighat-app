@@ -4,9 +4,6 @@ import "./App.css";
 import { useEffect, useRef, useState } from "react";
 import { useRunner } from "../../utils/useRunner";
 
-// Todo:  pass the errors
-// Todo:  mobile
-
 function App() {
   const [nodes, setCompletedNodes] = useState([]);
   const nodesRef = useRef([]); // Needed for the callback to have the latest value
