@@ -1,15 +1,12 @@
 :root {
-  --background-primary: var(--bighat-peach);
-  --border-primary: rgb(50, 50, 50);
-  --border-primary: rgb(85, 70, 170);
-  --text-primary: rgb(50, 50, 50);
-  --text-accent: var(--white);
-  --background-color-accent: var(--bighat-dark-purple);
-  --background-color-accent-hover-focus: var(--bighat-medium-purple);
-  --background-color-accent-active: var(--bighat-medium-purple);
-  --white: rgb(255, 255, 255);
-  --white-hover-focus: rgb(235, 235, 235);
-  --white-active: rgb(230, 230, 230);
+  --background-dark: var(--bighat-dark-purple);
+  --background-dark-active: var(--bighat-medium-purple);
+  --background-light: var(--white);
+  --border-primary: var(--bighat-dark-purple);
+  --box-shadow-color: var(--bighat-medium-purple);
+  --text-color-dark: rgb(50, 50, 50);
+  --text-color-light: var(--white);
+  --white: rgb(250, 250, 250);
   --bighat-dark-purple: rgb(42, 34, 81);
   --bighat-medium-purple: rgb(125, 125, 247);
   --bighat-grey: rgb(246, 246, 246);
@@ -19,11 +16,8 @@
 }
 
 html {
-  background: linear-gradient(
-    to bottom right,
-    var(--bighat-peach),
-    var(--bighat-medium-purple)
-  );
+  background: var(--background-dark);
+  color: var(--text-color-dark);
 }
 
 *,
@@ -34,19 +28,54 @@ html {
 
 .App {
   block-size: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    inline-size: 90vw;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-block: 20px;
+  }
 }
 
 .App-header {
-  color: var(--text-accent);
+  color: var(--text-color-light);
   background-color: var(--bighat-dark-purple);
   font-size: 3rem;
   padding-block: 2rem;
 }
 
 main {
+  background: linear-gradient(
+    to bottom right,
+    var(--bighat-peach),
+    var(--bighat-medium-purple)
+  );
   color: var(--text-primary);
-  display: flex;
-  justify-content: space-around;
-  margin: 20px;
+  flex-grow: 1;
+}
+
+@media (min-width: 800px) {
+  .App .layout {
+    flex-direction: row;
+    inline-size: 80vw;
+    padding-block: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .App .layout {
+    inline-size: 70vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .App .layout {
+    inline-size: 60vw;
+  }
 }

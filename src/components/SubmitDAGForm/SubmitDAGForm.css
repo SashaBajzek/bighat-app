@@ -1,12 +1,18 @@
 .SubmitDAGForm {
   display: flex;
   flex-direction: column;
+  inline-size: 100%;
+
+  h1 {
+    margin: 0;
+    padding-block-end: 50px;
+  }
 
   button {
-    background: var(--background-color-accent);
+    background: var(--background-dark);
     block-size: 60px;
     border-width: 0;
-    color: white;
+    color: var(--text-color-light);
     flex-shrink: 0;
     font-size: 20px;
     inline-size: 100%;
@@ -17,14 +23,9 @@
     }
 
     &:hover,
-    &:focus-visible {
-      background: var(--background-color-accent-hover-focus);
-      transition: background-color 0.2s;
-    }
-
-    &:active,
-    &:focus-visible {
-      background: var(--background-color-accent-active);
+    &:focus-visible,
+    &:active {
+      background: var(--background-dark-active);
       transition: background-color 0.2s;
     }
   }
@@ -34,7 +35,18 @@
   }
 
   textarea {
-    background-color: var(--bighat-grey);
+    background-color: var(--background-light);
     border-radius: 10px;
+  }
+
+  .submit-button {
+    margin-block-start: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .SubmitDAGForm {
+    max-inline-size: 500px;
+    inline-size: 35vw;
   }
 }

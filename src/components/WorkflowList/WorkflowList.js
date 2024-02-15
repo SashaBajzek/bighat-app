@@ -3,11 +3,14 @@ import "./WorkflowList.css";
 
 function WorkflowList({ nodes }) {
   return (
-    <ul className="WorkflowList">
-      {nodes.map((node) => (
-        <WorkflowItem key={node.id} text={node.text} time={node.time} />
-      ))}
-    </ul>
+    <div className="WorkflowList">
+      <h2>WorkFlow Visualization</h2>
+      <ul>
+        {nodes.map((node) => (
+          <WorkflowItem key={node.id} text={node.text} time={node.time} />
+        ))}
+      </ul>
+    </div>
   );
 }
 

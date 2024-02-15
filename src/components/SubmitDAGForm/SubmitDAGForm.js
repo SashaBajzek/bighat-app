@@ -29,10 +29,10 @@ function SubmitDAGForm({ onSubmit }) {
 
   return (
     <form className="SubmitDAGForm" onSubmit={handleSubmit}>
-      <h1>Enter your JSON</h1>
+      <h1>Choose your Workflow</h1>
       <button onClick={useDefaultExample}>Use the default</button>
       <div className="divider">or</div>
-      <label htmlFor="dag-input">Enter your own DAG JSON format:</label>
+      <label htmlFor="dag-input">Enter your own DAG in JSON format:</label>
       <textarea
         aria-describedby={"error"}
         id="dag-input"
@@ -42,7 +42,9 @@ function SubmitDAGForm({ onSubmit }) {
         value={DAGText}
       />
       <div id="error">{errorMessage}</div>
-      <button type="submit">Submit</button>
+      <button className="submit-button" type="submit">
+        Submit
+      </button>
     </form>
   );
 }
