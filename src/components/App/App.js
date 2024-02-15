@@ -26,8 +26,8 @@ function App() {
 
   // Printing function
   const printValue = (string, startTime) => {
-    const printTime = new Date().getSeconds();
-    const difference = printTime - startTime;
+    const printTime = performance.now();
+    const difference = Math.floor((printTime - startTime) / 1000);
     console.log(`${string}, Elapsed Time: ${difference}s`);
     setCompletedNodes([
       ...nodesRef.current,

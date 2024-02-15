@@ -21,7 +21,7 @@ export function useRunner() {
     timeoutIdsRef.current = [];
 
     // set the start time
-    startTime.current = new Date().getSeconds();
+    startTime.current = performance.now();
 
     // set graph
     graph.current = JSON.parse(json);
