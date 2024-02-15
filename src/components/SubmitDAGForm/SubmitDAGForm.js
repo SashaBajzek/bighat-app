@@ -35,13 +35,16 @@ function SubmitDAGForm({ onSubmit }) {
       <label htmlFor="dag-input">Enter your own DAG in JSON format:</label>
       <textarea
         aria-describedby={"error"}
+        className={errorMessage && "error"}
         id="dag-input"
         onChange={(e) => setDAGText(e.target.value)}
         rows={10}
         type="text"
         value={DAGText}
       />
-      <div id="error">{errorMessage}</div>
+      <div className="error-message" id="error">
+        {errorMessage}
+      </div>
       <button className="submit-button" type="submit">
         Submit
       </button>

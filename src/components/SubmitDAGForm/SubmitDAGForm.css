@@ -31,12 +31,39 @@
   }
 
   .divider {
-    padding-block: 1rem;
+    font-weight: bold;
+    padding-block: 2rem;
+  }
+
+  label {
+    font-weight: bold;
+    padding-block: 0.4rem;
+    text-align: left;
   }
 
   textarea {
     background-color: var(--background-light);
+    border: 1px solid var(--border-primary);
     border-radius: 10px;
+    padding: 8px;
+    margin-block-end: 21px;
+
+    &:focus-visible {
+      box-shadow: 0px 0px 2px 1px var(--box-shadow-color);
+      outline: none;
+    }
+
+    &.error {
+      border: 1px solid var(--border-error);
+      box-shadow: 0px 0px 2px 1px var(--border-error);
+      margin-block-end: 2px;
+    }
+  }
+
+  .error-message {
+    color: var(--text-color-error);
+    font-weight: bold;
+    text-align: left;
   }
 
   .submit-button {
