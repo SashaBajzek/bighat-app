@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bighat-app/static/css/main.982bb2dd.css",
-    "main.js": "/bighat-app/static/js/main.9d1ff371.js",
+    "main.css": "/bighat-app/static/css/main.5ba9eb5d.css",
+    "main.js": "/bighat-app/static/js/main.92b1e520.js",
     "static/js/592.510b6d07.chunk.js": "/bighat-app/static/js/592.510b6d07.chunk.js",
     "index.html": "/bighat-app/index.html",
-    "main.982bb2dd.css.map": "/bighat-app/static/css/main.982bb2dd.css.map",
-    "main.9d1ff371.js.map": "/bighat-app/static/js/main.9d1ff371.js.map",
+    "main.5ba9eb5d.css.map": "/bighat-app/static/css/main.5ba9eb5d.css.map",
+    "main.92b1e520.js.map": "/bighat-app/static/js/main.92b1e520.js.map",
     "592.510b6d07.chunk.js.map": "/bighat-app/static/js/592.510b6d07.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.982bb2dd.css",
-    "static/js/main.9d1ff371.js"
+    "static/css/main.5ba9eb5d.css",
+    "static/js/main.92b1e520.js"
   ]
 }
