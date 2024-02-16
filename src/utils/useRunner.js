@@ -1,14 +1,5 @@
 import { useRef } from "react";
-
-// Identify the starting node
-// Run time O(v), linear
-function getStartingNodeKey(graph) {
-  for (let key in graph) {
-    if (graph[key].start) {
-      return key;
-    }
-  }
-}
+import { getStartingNodeKey } from "./getStartingNodeKey";
 
 export function useRunner() {
   const timeoutIdsRef = useRef([]);
