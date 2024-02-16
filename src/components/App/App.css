@@ -53,16 +53,13 @@ html {
     padding-block: 20px;
   }
 
-  .main-background {
-    background-color: var(--background-light);
-  }
-
   main {
     background: linear-gradient(
       to bottom right,
       var(--bighat-peach),
       var(--bighat-medium-purple)
     );
+    background-color: var(--background-light);
     color: var(--text-primary);
     flex-grow: 1;
   }

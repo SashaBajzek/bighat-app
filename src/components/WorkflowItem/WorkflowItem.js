@@ -4,7 +4,7 @@ function WorkflowItem({ id, text, time }) {
   return (
     <li className="WorkflowItem">
       <div className="value">{text}</div>
-      <div className="time">Elapsed Time: {time}s</div>
+      <div>Elapsed Time: {time}s</div>
     </li>
   );
 }

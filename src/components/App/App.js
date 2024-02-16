@@ -35,12 +35,10 @@ function App() {
   return (
     <div className="App">
       <header>DAG Workflow Runner</header>
-      <main className="main-background">
-        <div>
-          <div className="main-layout">
-            <SubmitDAGForm onSubmit={onSubmit} />
-            <WorkflowList nodes={nodes} />
-          </div>
+      <main>
+        <div className="main-layout">
+          <SubmitDAGForm onSubmit={onSubmit} />
+          <WorkflowList nodes={nodes} />
         </div>
       </main>
     </div>
