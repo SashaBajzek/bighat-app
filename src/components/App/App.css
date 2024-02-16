@@ -9,13 +9,13 @@
   --text-color-dark: var(--black);
   --text-color-light: var(--white);
   --text-color-error: var(--error);
-  --black: rgb(50, 50, 50);
+  --black: rgb(36, 36, 36);
   --white: rgb(250, 250, 250);
   --bighat-dark-purple: rgb(42, 34, 81);
-  --bighat-medium-purple: rgb(125, 125, 247);
+  --bighat-medium-purple: rgba(125, 125, 247, 0.7);
   --bighat-grey: rgb(246, 246, 246);
-  --bighat-peach: rgb(250, 225, 217);
-  --error: #a80014;
+  --bighat-peach: rgba(250, 225, 217, 0.7);
+  --error: #85000f;
 }
 
 html {
@@ -36,6 +36,13 @@ html {
   flex-direction: column;
   text-align: center;
 
+  header {
+    color: var(--text-color-light);
+    background-color: var(--bighat-dark-purple);
+    font-size: 3rem;
+    padding-block: 2rem;
+  }
+
   .main-layout {
     display: flex;
     flex-direction: column;
@@ -45,23 +52,20 @@ html {
     margin: 0 auto;
     padding-block: 20px;
   }
-}
 
-.App-header {
-  color: var(--text-color-light);
-  background-color: var(--bighat-dark-purple);
-  font-size: 3rem;
-  padding-block: 2rem;
-}
+  .main-background {
+    background-color: var(--background-light);
+  }
 
-main {
-  background: linear-gradient(
-    to bottom right,
-    var(--bighat-peach),
-    var(--bighat-medium-purple)
-  );
-  color: var(--text-primary);
-  flex-grow: 1;
+  main {
+    background: linear-gradient(
+      to bottom right,
+      var(--bighat-peach),
+      var(--bighat-medium-purple)
+    );
+    color: var(--text-primary);
+    flex-grow: 1;
+  }
 }
 
 @media (min-width: 800px) {
