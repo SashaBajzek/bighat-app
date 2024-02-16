@@ -8,15 +8,20 @@ function getStartingNodeKey(graph) {
   }
 }
 
-// TODO!!!!! clear the setTimeout, otherwise when you run a new DAG, you'll have old one running too
-
-export function runSequence(json, callback) {
-  const startTime = new Date().getSeconds();
+export function runSequence(json) {
+  const startTime = performance.now();
   const graphObj = JSON.parse(json);
+
+  // Printing function
+  const printValue = (string) => {
+    const printTime = performance.now();
+    const difference = Math.floor((printTime - startTime) / 1000);
+    console.log(`${string}, Elapsed Time: ${difference}s`);
+  };
 
   const recurse = (key, edges) => {
     // print the value of current node
-    callback(key, startTime);
+    printValue(key);
     // for each edge, setTimeout to call it once edge time is up
     for (let edge in edges) {
       let scopedEdge = edge;
